@@ -1,7 +1,14 @@
-import ProductsList from "../../components/templates/ProductsList";
+import HomePage from "../../components/templates/HomePage";
 
-function Products() {
-  return <ProductsList />;
+export default function Home({ data }) {
+  return <HomePage data={data} />;
 }
 
-export default Products;
+export async function getStaticProps() {
+  const res = await fetch("https://fakestoreapi.com/products");
+  const data = await res.json();
+
+  return {
+    props: { data },
+  };
+}

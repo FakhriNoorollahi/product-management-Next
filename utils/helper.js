@@ -33,3 +33,11 @@ export const checkToken = (handlerCb, routerCb) => {
   toast.error("ابتدا وارد حساب کاربری خود شوید");
   routerCb();
 };
+
+export const shortText = (txt) => {
+  return txt.split(" ").splice(0, 3);
+};
+
+export const roundNumber = (price) => {
+  return price.toFixed(2);
+};

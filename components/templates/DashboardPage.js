@@ -10,7 +10,7 @@ import Pagination from "../modules/Pagination";
 import { useRouter } from "next/router";
 import { getCookie } from "../../utils/cookie";
 
-function ProductsList() {
+function DashboardPage() {
   const router = useRouter();
   const token = getCookie();
   const [search, setSearch] = useState("");
@@ -45,11 +45,11 @@ function ProductsList() {
 
   useEffect(() => {
     if (!search) {
-      router.push({ pathname: "/products", query: { page, limit: 10 } });
+      router.push({ pathname: "/dashboard", query: { page, limit: 10 } });
       return;
     }
     router.push({
-      pathname: "/products",
+      pathname: "/dashboard",
       query: { page: pageSearch, limit: 10, name: search },
     });
   }, [page, search, pageSearch]);
@@ -88,4 +88,4 @@ function ProductsList() {
   );
 }
 
-export default ProductsList;
+export default DashboardPage;

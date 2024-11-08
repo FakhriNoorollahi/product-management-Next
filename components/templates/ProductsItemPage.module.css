@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 0 10em;
+  gap: 3em;
+  min-height: calc(100vh - 4em);
+  direction: ltr;
+}
+
+.imgContainer {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 0.3em;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.imgContainer img {
+  width: 250px;
+  height: 250px;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 1em;
+  transition: all 0.3s ease-in-out;
+}
+
+.information h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 0.9em;
+  line-height: 2em;
+  text-align: justify;
+}
+
+.price {
+  font-size: 0.9em;
+}
+
+.price span {
+  font-size: 1.1em;
+  font-weight: 700;
+}

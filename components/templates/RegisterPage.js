@@ -37,7 +37,7 @@ function RegisterPage() {
   };
 
   useEffect(() => {
-    if (token) router.push("/products");
+    if (token) router.push("/dashboard");
   }, [token, router]);
 
   return (

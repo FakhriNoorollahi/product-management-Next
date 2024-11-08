@@ -4,6 +4,8 @@ import styles from "../templates/Products.module.css";
 import { getDataLocalStorage } from "../../utils/localStorage";
 import { checkToken } from "../../utils/helper";
 import { useRouter } from "next/router";
+import { CgLogOut } from "react-icons/cg";
+import { removeCooki } from "../../utils/cookie";
 
 function ProductSearch({ search, setSearch }) {
   const [username, setUsername] = useState("");
@@ -33,7 +35,17 @@ function ProductSearch({ search, setSearch }) {
         <img src="/images/profile.png" alt="profile" />
         <div>
           <p>{username}</p>
-          <p>مدیر</p>
+          <div className={styles.logout}>
+            <p>مدیر</p>
+            <button
+              onClick={() => {
+                removeCooki();
+                router.push("/products");
+              }}
+            >
+              <CgLogOut />
+            </button>
+          </div>
         </div>
       </div>
     </div>

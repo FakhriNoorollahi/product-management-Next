@@ -59,10 +59,28 @@
   color: var(--header-color);
 }
 
-.informatin > div > p:last-child {
+.logout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.logout p {
   font-size: 14px;
   font-weight: 300;
   color: var(--header-color);
+}
+
+.logout button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout button svg {
+  color: var(--red);
+  width: 20px;
 }
 
 /* add Product */
