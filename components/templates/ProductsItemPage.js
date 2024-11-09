@@ -1,6 +1,6 @@
+import styles from "./ProductsItemPage.module.css";
 import Header from "../modules/Header";
 import ProductsItems from "../modules/ProductsItems";
-import styles from "./ProductsItemPage.module.css";
 
 function ProductsItemPage({ product }) {
   return (
