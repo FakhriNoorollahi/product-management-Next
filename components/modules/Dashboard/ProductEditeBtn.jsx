@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { BiMessageSquareEdit } from "react-icons/bi";
-import styles from "../templates/Products.module.css";
-import AddEditeModal from "./AddEditeModal";
-import { useEditeProduct } from "../../hooks/mutations";
-import toast from "react-hot-toast";
-import { getCookie } from "../../utils/cookie";
-import { checkToken } from "../../utils/helper";
 import { useRouter } from "next/router";
+import toast from "react-hot-toast";
+import { BiMessageSquareEdit } from "react-icons/bi";
+import AddEditeModal from "./AddEditeModal";
+import styles from "../../templates/Products.module.css";
+import { useEditeProduct } from "../../../hooks/mutations";
+import { getCookie } from "../../../utils/cookie";
+import { checkToken } from "../../../utils/helper";
 
 function ProductEditeBtn({ id, product }) {
   const [editeModalOpen, setEditeModalOpen] = useState(false);

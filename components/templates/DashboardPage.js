@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Products.module.css";
-import ProductSearch from "../modules/ProductSearch";
-import AddProduct from "../modules/AddProduct";
-import ProductsTable from "../modules/ProductsTable";
-import { useProducts } from "../../hooks/queries";
 import { useForm } from "react-hook-form";
-import { useDeleteMultiProduct } from "../../hooks/mutations";
-import Pagination from "../modules/Pagination";
 import { useRouter } from "next/router";
+import styles from "./Products.module.css";
+import ProductSearch from "../modules/Dashboard/ProductSearch";
+import AddProduct from "../modules/Dashboard/AddProduct";
+import ProductsTable from "../modules/Dashboard/ProductsTable";
+import Pagination from "../modules/Dashboard/Pagination";
+import { useProducts } from "../../hooks/queries";
 import { getCookie } from "../../utils/cookie";
+import { useDeleteMultiProduct } from "../../hooks/mutations";
 
 function DashboardPage() {
   const router = useRouter();

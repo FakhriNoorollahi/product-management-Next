@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { CiSearch } from "react-icons/ci";
-import styles from "../templates/Products.module.css";
-import { getDataLocalStorage } from "../../utils/localStorage";
-import { checkToken } from "../../utils/helper";
 import { useRouter } from "next/router";
+import { CiSearch } from "react-icons/ci";
 import { CgLogOut } from "react-icons/cg";
-import { removeCooki } from "../../utils/cookie";
+import styles from "../../templates/Products.module.css";
+import { getDataLocalStorage } from "../../../utils/localStorage";
+import { checkToken } from "../../../utils/helper";
+import { removeCooki } from "../../../utils/cookie";
 
 function ProductSearch({ search, setSearch }) {
   const [username, setUsername] = useState("");

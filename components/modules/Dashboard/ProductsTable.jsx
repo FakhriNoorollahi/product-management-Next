@@ -1,8 +1,8 @@
 import React from "react";
-import { tableTitles } from "../../utils/constants";
-import styles from "../templates/Products.module.css";
 import Product from "./Product";
-import Loader from "./Loader";
+import styles from "../../templates/Products.module.css";
+import Loader from "../Loader";
+import { tableTitles } from "../../../utils/constants";
 
 function ProductsTable({
   isPending,

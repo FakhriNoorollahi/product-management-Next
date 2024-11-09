@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { HiEye } from "react-icons/hi";
-import styles from "../templates/Products.module.css";
-import Loader from "./Loader";
-import { useProductInfo } from "../../hooks/queries";
-import Modal from "./Modal";
-import { FaRegCircleXmark } from "react-icons/fa6";
-import { checkToken } from "../../utils/helper";
 import { useRouter } from "next/router";
+import { FaRegCircleXmark } from "react-icons/fa6";
+import Loader from "../Loader";
+import Modal from "../Modal";
+import styles from "../../templates/Products.module.css";
+import { useProductInfo } from "../../../hooks/queries";
+import { checkToken } from "../../../utils/helper";
 
 function ProductInfoBtn({ id }) {
   const [showProdoctModal, setShowProductModal] = useState(false);

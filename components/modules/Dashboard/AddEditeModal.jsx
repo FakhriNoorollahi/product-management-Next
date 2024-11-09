@@ -1,8 +1,11 @@
 import React from "react";
-import styles from "../templates/Products.module.css";
-import InputLabel from "./InputLabel";
-import { AddEditeFormTitles, productInformation } from "../../utils/constants";
-import Modal from "./Modal";
+import styles from "../../templates/Products.module.css";
+import InputLabel from "../InputLabel";
+import {
+  AddEditeFormTitles,
+  productInformation,
+} from "../../../utils/constants";
+import Modal from "../Modal";
 
 function AddEditeModal({
   title,

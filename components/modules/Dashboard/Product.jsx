@@ -2,7 +2,7 @@ import React from "react";
 import ProductInfoBtn from "./ProductInfoBtn";
 import ProductEditeBtn from "./ProductEditeBtn";
 import ProductDeleteBtn from "./ProductDeleteBtn";
-import styles from "../templates/Products.module.css";
+import styles from "../../templates/Products.module.css";
 
 function Product({ product, multipleDelOpen, register }) {
   const { id, name, quantity, price } = product;

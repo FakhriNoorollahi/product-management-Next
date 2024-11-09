@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { HiTrash } from "react-icons/hi";
-import styles from "../templates/Products.module.css";
-import { useDeleteProduct } from "../../hooks/mutations";
-import Modal from "../modules/Modal";
-import { checkToken } from "../../utils/helper";
 import { useRouter } from "next/router";
+import styles from "../../templates/Products.module.css";
+import Modal from "../Modal";
+import { useDeleteProduct } from "../../../hooks/mutations";
+import { checkToken } from "../../../utils/helper";
 
 function ProductDeleteBtn({ id }) {
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);

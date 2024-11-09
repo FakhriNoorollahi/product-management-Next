@@ -1,13 +1,13 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { CiGrid41 } from "react-icons/ci";
-import styles from "../templates/Products.module.css";
-import Button from "./Button";
+import styles from "../../templates/Products.module.css";
+import Button from "../Button";
 import AddEditeModal from "./AddEditeModal";
-import { useAddNewProduct } from "../../hooks/mutations";
-import { checkToken } from "../../utils/helper";
-import { useRouter } from "next/router";
+import { useAddNewProduct } from "../../../hooks/mutations";
+import { checkToken } from "../../../utils/helper";
 
 function AddProduct({ onMultiDel, multiDel }) {
   const [addModalOpen, setAddModalOpen] = useState(false);

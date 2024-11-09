@@ -1,5 +1,5 @@
 import React from "react";
-import { createPaginationArray } from "../../utils/helper";
+import { createPaginationArray } from "../../../utils/helper";
 
 function Pagination({ page: currentPage, setPage, totalPage }) {
   const numberOfPage = createPaginationArray(totalPage);
