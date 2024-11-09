@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
-import { setCookie } from "../../utils/cookie";
+import { getCookie, setCookie } from "../../utils/cookie";
 import { saveLocalStorage } from "../../utils/localStorage";
 import { checkFormInputIsEmpty } from "../../utils/helper";
 import Form from "../modules/Form";
@@ -11,6 +11,7 @@ function LoginPage() {
   const { mutate, isPending } = useLogin();
   const { register, handleSubmit, getValues } = useForm();
   const router = useRouter();
+  const token = getCookie();
 
   const handleForm = (data) => {
     const { username } = data;
@@ -28,6 +29,10 @@ function LoginPage() {
     const { username, password } = getValues();
     checkFormInputIsEmpty({ username, password });
   };
+
+  useEffect(() => {
+    if (token) router.push("/dashboard");
+  }, [token, router]);
 
   return (
     <Form
